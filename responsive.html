@@ -18,10 +18,11 @@ Description : Responsive Layouts.
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- First, link the menu.css file here -->
+	<link href="menu.css" rel="stylesheet" type="text/css" />
 
 	<style>	
 		/* Remove borders at the end, they have been add just for detecting positions of items*/	
-		div {
+		/* div {
 			border: 1px dashed gray;	
 		}
 		.row{ 
@@ -35,7 +36,7 @@ Description : Responsive Layouts.
 		}
 		.small {
 			border: 1px solid yellow;	
-		}		
+		}		 */
 	</style>
 
     <style>
@@ -46,37 +47,73 @@ Description : Responsive Layouts.
         .main { padding: 15px; margin-left: 150px;}		
         .footer { position: fixed; bottom: 0; width: 100%;}
         .news-item { padding: 10px; }
-		
+
 		.row { 
 			/*I need some CSS codes.*/		
+			display: table;
 		}
-
+		
 		.large, .medium, .small {
 			/*I need some CSS codes.*/
+			display: table-cell;
 		}
 		
 		.gap {
 			/*I need some CSS codes.*/
+			margin-bottom: 100px;
 		}
 
+
+		/* Computer screens (large) */
 		@media screen and (min-width: 769px) {			
 			.large { 
-				/*I need some CSS codes.*/
+				width: 100%;
 			}
 			.medium { 
-				/*I need some CSS codes.*/
+				width: 70%;
 			}
 			.small { 
-				/*I need some CSS codes.*/
-			 }
+				width: 30%;
+			}
 		}
 
+		/* Tablet screens (medium) */
         @media screen and (max-width: 768px) {
-            /*I need some CSS codes.*/
+			.large { 
+				width: 100%;
+			}
+			.medium { 
+				width: 60%;
+			}
+			.small { 
+				width: 40%;
+			}
+			/* Change to horizontal menu */
+			.menu {
+				width: 100%;
+			}
+			.main {
+				margin-left: 0;
+			}
         }
-
+		
+		/* Phone screens (small) */
         @media screen and (max-width: 480px) {
-			/*I need some CSS codes.*/
+			.large, .medium, .small {
+				width: 100%;
+				display: block;
+				padding: 0;
+			}	
+			h1 {
+				font-size: 18px;
+			}
+			/* Change to horizontal menu */
+			.menu {
+				width: 100%;
+			}
+			.main {
+				margin-left: 0;
+			}
         }
 
         
